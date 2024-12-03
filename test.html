@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Копирование VPN-кода</title>
+    <script>
+        function copyAndClose() {
+            const vpnKey = "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpudUpVb21VaHBWTlVhbU9ZVFRDNkto@91.103.140.25:21267/?outline=1";
+            
+            navigator.clipboard.writeText(vpnKey).then(() => {
+                alert("Код успешно скопирован в буфер обмена!");
+                window.close(); // Попытка закрыть вкладку
+            }).catch(err => {
+                alert("Не удалось скопировать код: " + err);
+            });
+        }
+    </script>
+</head>
+<body onload="copyAndClose()">
+    <h1>Копирование кода VPN...</h1>
+</body>
+</html>
